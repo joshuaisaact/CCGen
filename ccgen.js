@@ -43,9 +43,14 @@ const genValCC = (firstDigit) => {
     let valCC = randomCC(firstDigit);
     while (!isValid(valCC)) {
         valCC = randomCC(firstDigit);
+        effCount++;
     }
     return valCC;
 }
+
+// Monitors loop efficiency
+
+let effCount = 0;
 
 // Random AMEX CC
 
@@ -64,11 +69,11 @@ const genMastercard = () => genValCC(5)
 const genDiscover = () => genValCC(6)
 
 
-let cc1 = genAmex();
+/*let cc1 = genAmex();
 let cc2 = genVISA();
 let cc3 = genMastercard();
 let cc4 = genDiscover();
-/*console.log(cc1)
+console.log(cc1)
 console.log(cc2)
 console.log(cc3)
 console.log(cc4)
@@ -85,3 +90,4 @@ while (longCCList.length < 30) {
 
 console.log(longCCList);
 console.log(longCCList.length);
+console.log(effCount);
