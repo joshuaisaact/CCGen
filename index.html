@@ -18,14 +18,35 @@
 |||||
 |||||
     </pre>
-    <div class="buttons">
-        <button type="button" id="gen-cc">AMEX</button>
-        <button type="button" id="gen-visa">VISA</button>
-        <button type="button" id="gen-mc">MASTERCARD</button>
-        <button type="button" id="gen-disc">DISCOVER</button>
-    </div>
-    <div id="output"></div><br><br>
+    <section id="single-card">
+        <div class="buttons">
+            <button type="button" id="gen-cc">AMEX</button>
+            <button type="button" id="gen-visa">VISA</button>
+            <button type="button" id="gen-mc">MASTERCARD</button>
+            <button type="button" id="gen-disc">DISCOVER</button>
+        </div>
+        <div id="output"></div>
+    </section>
 
+    <section id="multi-card">
+        <form>
+            <legend>MULTI CARD GENERATION</legend>
+            <div id="radio">
+                <input type="radio" id="amrad" name="mulcard" value="3">
+                <label for="amrad">AMEX</label>
+                <input type="radio" id="visarad" name="mulcard" value="4">
+                <label for="visarad">VISA</label>
+                <input type="radio" id="mcrad" name="mulcard" value="5">
+                <label for="mcrad">MASTERCARD</label>
+                <input type="radio" id="dcrad" name="mulcard" value="6">
+                <label for="dcrad">DISCOVER</label>
+            </div>
+            <label for="cards">Number of cards (2-100):</label>
+            <input type="number" id="cards" name="cards" min="2" max="100" required/>
+            <button type="button" id="generate">GENERATE</button>
+        </form>
+        <div id="outputmulti"></div>
+    </section>
     <script src="ccgen.js"></script>
 </body>
 </html>

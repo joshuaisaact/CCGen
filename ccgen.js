@@ -49,6 +49,8 @@ const genValCC = (firstDigit) => {
 }
 
 const buttonCC = (num) => {
+    console.log('ButtonCC called')
+    console.log(document.getElementById("output"))
     document.getElementById("output").innerHTML = genValCC(num).join("");
 };
 
@@ -79,3 +81,10 @@ document.getElementById("gen-visa").addEventListener("click", () => buttonCC(4))
 document.getElementById("gen-mc").addEventListener("click", () => buttonCC(5));
 document.getElementById("gen-disc").addEventListener("click", () => buttonCC(6));
 
+
+document.getElementById("generate").addEventListener("click", () => {
+    let selectedCard = document.querySelector('input[name="mulcard"]:checked').value;
+    console.log(selectedCard);
+    return buttonCC(selectedCard);
+
+});
