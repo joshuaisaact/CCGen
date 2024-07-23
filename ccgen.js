@@ -68,6 +68,7 @@ const genMastercard = () => genValCC(5)
 
 const genDiscover = () => genValCC(6)
 
+document.getElementById("gen-cc").onclick = randomCC();
 
 /*let cc1 = genAmex();
 let cc2 = genVISA();
