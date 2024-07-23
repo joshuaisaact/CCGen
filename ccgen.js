@@ -14,12 +14,6 @@ const randomCC = (firstDigit) => {
     return ccNo;
 }
 
-const buttonCC = () => {
-    document.getElementById("output").innerHTML = randomCC().join("");
-};
-
-document.getElementById("gen-cc").addEventListener("click", buttonCC);
-
 // Checks if the CC number is valid according to the Luhn algo
 
 const isValid = (arr) => {
@@ -54,6 +48,10 @@ const genValCC = (firstDigit) => {
     return valCC;
 }
 
+const buttonCC = (num) => {
+    document.getElementById("output").innerHTML = genValCC(num).join("");
+};
+
 // Monitors loop efficiency
 
 let effCount = 0;
@@ -73,4 +71,11 @@ const genMastercard = () => genValCC(5)
 // Random Discover CC
 
 const genDiscover = () => genValCC(6)
+
+
+
+document.getElementById("gen-cc").addEventListener("click", () => buttonCC(3));
+document.getElementById("gen-visa").addEventListener("click", () => buttonCC(4));
+document.getElementById("gen-mc").addEventListener("click", () => buttonCC(5));
+document.getElementById("gen-disc").addEventListener("click", () => buttonCC(6));
 
