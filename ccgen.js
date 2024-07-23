@@ -14,6 +14,14 @@ const randomCC = (firstDigit) => {
     return ccNo;
 }
 
+const buttonCC = () => {
+    let res = randomCC().join("");
+    console.log(res);
+    document.getElementById("output").innerHTML = res;
+};
+
+document.getElementById("gen-cc").addEventListener("click", buttonCC);
+
 // Checks if the CC number is valid according to the Luhn algo
 
 const isValid = (arr) => {
@@ -68,27 +76,3 @@ const genMastercard = () => genValCC(5)
 
 const genDiscover = () => genValCC(6)
 
-document.getElementById("gen-cc").onclick = randomCC();
-
-/*let cc1 = genAmex();
-let cc2 = genVISA();
-let cc3 = genMastercard();
-let cc4 = genDiscover();
-console.log(cc1)
-console.log(cc2)
-console.log(cc3)
-console.log(cc4)
-console.log(isValid(cc3));
-console.log(isValid(cc4));
-*/
-
-// Let's create 30 valid AMEX credit card numbers!
-
-const longCCList = [];
-while (longCCList.length < 30) {
-    longCCList.push(genAmex());
-}
-
-console.log(longCCList);
-console.log(longCCList.length);
-console.log(effCount);
