@@ -2,6 +2,7 @@ html {
     text-align: center;
     background-color: black;
     color: lime;
+    font-family: 'Kode Mono';
 }
 
 body {
@@ -14,4 +15,5 @@ button {
     color: lime;
     border-color: lime;
     border: 2px solid;
+    font-family: 'Kode Mono';
 }
