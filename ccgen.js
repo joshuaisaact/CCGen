@@ -43,7 +43,7 @@ const genValCC = (firstDigit) => {
     let valCC = randomCC(firstDigit);
     while (!isValid(valCC)) {
         valCC = randomCC(firstDigit);
-        effCount++;
+        //effCount++;
     }
     return valCC;
 }
@@ -52,9 +52,16 @@ const buttonCC = (num) => {
     document.getElementById("output").innerHTML = genValCC(num).join("");
 };
 
-// Monitors loop efficiency
+// Multi CC
 
-let effCount = 0;
+const multiCC = (num) => {
+    document.getElementById("outputmulti").innerHTML = genValCC(num).join("");
+};
+
+
+// Monitors loop efficiency (depreciated)
+
+// let effCount = 0;
 
 // Random AMEX CC
 
@@ -79,3 +86,18 @@ document.getElementById("gen-visa").addEventListener("click", () => buttonCC(4))
 document.getElementById("gen-mc").addEventListener("click", () => buttonCC(5));
 document.getElementById("gen-disc").addEventListener("click", () => buttonCC(6));
 
+
+document.getElementById("generate").addEventListener("click", () => {
+    let selectedCard = Number(document.querySelector('input[name="mulcard"]:checked').value);
+    //console.log(selectedCard);
+    let numCards = Number(document.querySelector('input[name="cards"]').value);
+    //console.log(numCards)
+    let cardList = [];
+    while (cardList.length < numCards) {
+        cardList.push(genValCC(selectedCard));
+    }
+    console.log(cardList)
+    let result = cardList.map(innerArray => innerArray.join('')).join('<br>');
+    document.getElementById("outputmulti").innerHTML = result;
+
+});
