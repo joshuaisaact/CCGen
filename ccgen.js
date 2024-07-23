@@ -15,9 +15,7 @@ const randomCC = (firstDigit) => {
 }
 
 const buttonCC = () => {
-    let res = randomCC().join("");
-    console.log(res);
-    document.getElementById("output").innerHTML = res;
+    document.getElementById("output").innerHTML = randomCC().join("");
 };
 
 document.getElementById("gen-cc").addEventListener("click", buttonCC);
