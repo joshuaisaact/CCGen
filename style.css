@@ -2,9 +2,18 @@ html {
     text-align: center;
     background-color: black;
     color: lime;
+    font-family: 'Kode Mono';
 }
 
 body {
     width: 80%;
     margin: 1rem auto;
+}
+
+button {
+    background-color: black;
+    color: lime;
+    border-color: lime;
+    border: 2px solid;
+    font-family: 'Kode Mono';
 }
