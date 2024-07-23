@@ -8,3 +8,10 @@ body {
     width: 80%;
     margin: 1rem auto;
 }
+
+button {
+    background-color: black;
+    color: lime;
+    border-color: lime;
+    border: 2px solid;
+}
