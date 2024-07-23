@@ -96,7 +96,7 @@ document.getElementById("generate").addEventListener("click", () => {
     while (cardList.length < numCards) {
         cardList.push(genValCC(selectedCard));
     }
-    console.log(cardList)
+    //console.log(cardList)
     let result = cardList.map(innerArray => innerArray.join('')).join('<br>');
     document.getElementById("outputmulti").innerHTML = result;
 

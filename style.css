@@ -22,6 +22,11 @@ body {
     margin: 1rem auto;
 }
 
+a {
+    color: lime;
+    font-size: 20px;
+}
+
 button {
     background-color: black;
     color: lime;
@@ -39,7 +44,7 @@ button:active {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
-    margin-bottom: 2rem;
+    margin: 2rem;
 }
 
 #output {
@@ -75,4 +80,8 @@ input[type="radio"]:checked + label {
     margin: 2rem;
     gap: 1rem;
 
+}
+
+#generate {
+    margin: 1rem;
 }

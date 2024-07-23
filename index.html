@@ -7,10 +7,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+    <script type='text/javascript' src='//www.midijs.net/lib/midi.js'></script>
     <title>CCGen</title>
 </head>
 <body>
     <h1>CCGen</h1>
+
     <pre>
         ...----....
         ..-:"''         ''"-..
@@ -64,6 +66,7 @@ I:: VPAIMSSSSSSSSSBSSSMMBSSSBBMMMMXXI:MMHIMMI
       '"VHVHHHAHHHHMMV:"'
 
     </pre>
+    <a href="#" onClick="MIDIjs.play('midi/Unreal Superhero 3.mid');">Play Music</a>
     <section id="single-card">
         <div class="buttons">
             <button type="button" id="gen-cc">AMEX</button>
@@ -88,7 +91,7 @@ I:: VPAIMSSSSSSSSSBSSSMMBSSSBBMMMMXXI:MMHIMMI
                 <label for="dcrad">DISCOVER</label>
             </div>
             <label for="cards">Number of cards (2-100):</label>
-            <input type="number" id="cards" name="cards" min="2" max="100" inputmode="numeric" />
+            <input type="number" id="cards" name="cards" min="2" max="100" inputmode="numeric" /><br>
             <button type="button" id="generate">GENERATE</button>
         </form>
         <div id="outputmulti"></div>
